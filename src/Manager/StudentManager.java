@@ -45,6 +45,12 @@ public class StudentManager implements IManager<Student>{
     public Student[] findAll() {
         return this.list;
     }
+
+    @Override
+    public boolean checkId(int id) {
+        return false;
+    }
+
     public int getSize(){
         return this.size;
     }

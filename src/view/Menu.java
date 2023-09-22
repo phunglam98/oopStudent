@@ -22,6 +22,7 @@ public class Menu {
                     showMenuAdd();
                     break;
                 case 2:
+                    showDeleteMenu();
                     break;
                 case 3:
                     showMenuEdit();
@@ -35,6 +36,17 @@ public class Menu {
             }
         } while (choice!=0);
 
+    }
+    public void showDeleteMenu() {
+        System.out.println("\n--- 2.Xóa sinh viên ---");
+        System.out.print("Nhập ID sinh viên muốn xóa: ");
+        int id = inputIn.nextInt();
+        if (studentManager.checkId(id) == false) {
+            System.out.println("\nKhông có sinh viên này trong danh sách!!!");
+        } else {
+            studentManager.delete(id);
+            System.out.println("Đã xóa sinh viên thành công!");
+        }
     }
     public void showMenuEdit(){
         System.out.println("-----menu sửa----");

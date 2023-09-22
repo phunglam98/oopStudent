@@ -6,4 +6,5 @@ public interface IManager<T>{
     void edit(int id, T t);
     T[] findAll();
 
+    boolean checkId(int id);
 }
